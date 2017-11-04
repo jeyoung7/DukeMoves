@@ -39,7 +39,7 @@ export default class Main extends Component<{}> {
 
       >
       <Image
-      style={{ width: 36, height: 36, left: 25, top: 28, position: 'absolute' }}
+      style={{ width: 34, height: 34, left: 25, top: 28, position: 'absolute' }}
       source={Warnings}
       />
       <Image
