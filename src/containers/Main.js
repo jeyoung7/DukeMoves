@@ -5,6 +5,7 @@
  */
 
 import React, { Component } from 'react';
+import _ from 'lodash';
 import {
   Platform,
   StyleSheet,
@@ -21,15 +22,80 @@ import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import DukeHeader from '/Users/jacobyoung/Desktop/DukeMoves-master/assets/dukeheader.png';
 import Routes from '/Users/jacobyoung/Desktop/DukeMoves-master/assets/routes.png';
 import Warnings from '/Users/jacobyoung/Desktop/DukeMoves-master/assets/warnings.png';
+import BikeRack from '/Users/jacobyoung/Desktop/DukeMoves-master/assets/bikerack.png';
+import StopIcon from '/Users/jacobyoung/Desktop/DukeMoves-master/assets/Stop.png';
+
+import BikeRackData from '../../data/bikeRack.json';
+import Stops from '../../data/stops.json';
 
 export default class Main extends Component<{}> {
 
+  constructor(props) {
+    super(props)
+
+    this.renderIf = this.renderIf.bind(this);
+    this.onRegionChange = this.onRegionChange.bind(this);
+    this.state = { region: { latitudeDelta: 0.01422,
+         longitudeDelta: 0.0421 } }
+  }
+  onRegionChange(region) {
+    this.setState({ region });
+  }
+
+  renderIf(jsx, condition)
+  {
+    if (condition)
+     {
+       return jsx;
+     }
+  }
+
   render() {
+    const mapMarkers = BikeRackData.map((item) => { //creates bikeracks
+      return (
+        <MapView.Marker
+          coordinate={{
+            latitude: item.fields.lat,
+            longitude: item.fields.long
+
+          }}
+        >
+          <Image
+          style={{ width: 15, height: 15 }}
+          source={BikeRack}
+          />
+
+          </MapView.Marker>
+      );
+    });
+    const nStops = _.filter(Stops, (item)  => {
+      return item.fields.municipality === "duke";
+    });
+    const stopMarkers = nStops.map((item) => { //creates bikeracks
+      return (
+        <MapView.Marker
+        style={{ borderWidth: 1}}
+          coordinate={{
+            latitude: item.fields.stop_lat,
+            longitude: item.fields.stop_lon
+
+          }}
+        >
+          <Image
+          style={{ width: 25, height: 25, paddingLeft: 10 }}
+          source={StopIcon}
+          />
+
+          </MapView.Marker>
+      );
+    });
+
     return (
       <MapView
       provider={PROVIDER_GOOGLE}
       customMapStyle={require('../config/mapStyle.json')}
       style={styles.map}
+      onRegionChange={this.onRegionChange}
      initialRegion={{
       latitude: 36.0019,
        longitude: -78.9401,
@@ -51,7 +117,13 @@ export default class Main extends Component<{}> {
       source={Routes}
       />
 
-
+      {mapMarkers.map(item =>
+        {
+          console.log(this.state);
+          return this.renderIf(item, this.state.region.latitudeDelta < 11)
+        }
+      )}
+      {stopMarkers}
       </MapView>
     );
   }
