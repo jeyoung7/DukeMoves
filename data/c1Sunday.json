@@ -1,0 +1,308 @@
+[
+  {
+    "eastArrive": "---",
+    "eastDepart": "8:15",
+    "westArrive": "8:22",
+    "westDepart": "8:25"
+  },
+  {
+    "eastArrive": "8:32",
+    "eastDepart": "8:35",
+    "westArrive": "8:42",
+    "westDepart": "8:45"
+  },
+  {
+    "eastArrive": "8:52",
+    "eastDepart": "8:55",
+    "westArrive": "9:02",
+    "westDepart": "9:05"
+  },
+  {
+    "eastArrive": "9:12",
+    "eastDepart": "9:15",
+    "westArrive": "9:22",
+    "westDepart": "9:25"
+  },
+  {
+    "eastArrive": "9:32",
+    "eastDepart": "9:35",
+    "westArrive": "9:42",
+    "westDepart": "9:45"
+  },
+  {
+    "eastArrive": "9:52",
+    "eastDepart": "9:55",
+    "westArrive": "10:02",
+    "westDepart": "10:05"
+  },
+  {
+    "eastArrive": "10:12",
+    "eastDepart": "10:15",
+    "westArrive": "10:22",
+    "westDepart": "10:25"
+  },
+  {
+    "eastArrive": "10:32",
+    "eastDepart": "10:45",
+    "westArrive": "10:52",
+    "westDepart": "10:55"
+  },
+  {
+    "eastArrive": "11:02",
+    "eastDepart": "11:05",
+    "westArrive": "11:12",
+    "westDepart": "11:15"
+  },
+  {
+    "eastArrive": "11:22",
+    "eastDepart": "11:25",
+    "westArrive": "11:32",
+    "westDepart": "11:35"
+  },
+  {
+    "eastArrive": "11:42",
+    "eastDepart": "11:45",
+    "westArrive": "11:52",
+    "westDepart": "11:55"
+  },
+  {
+    "eastArrive": "12:02",
+    "eastDepart": "12:05",
+    "westArrive": "12:12",
+    "westDepart": "12:15"
+  },
+  {
+    "eastArrive": "12:22",
+    "eastDepart": "12:25",
+    "westArrive": "12:32",
+    "westDepart": "12:35"
+  },
+  {
+    "eastArrive": "12:42",
+    "eastDepart": "12:45",
+    "westArrive": "12:52",
+    "westDepart": "12:55"
+  },
+  {
+    "eastArrive": "13:02",
+    "eastDepart": "13:05",
+    "westArrive": "13:12",
+    "westDepart": "13:15"
+  },
+  {
+    "eastArrive": "13:22",
+    "eastDepart": "13:25",
+    "westArrive": "13:32",
+    "westDepart": "13:35"
+  },
+  {
+    "eastArrive": "13:42",
+    "eastDepart": "13:45",
+    "westArrive": "13:52",
+    "westDepart": "13:55"
+  },
+  {
+    "eastArrive": "14:02",
+    "eastDepart": "14:05",
+    "westArrive": "14:12",
+    "westDepart": "14:15"
+  },
+  {
+    "eastArrive": "14:22",
+    "eastDepart": "14:25",
+    "westArrive": "14:32",
+    "westDepart": "14:35"
+  },
+  {
+    "eastArrive": "14:42",
+    "eastDepart": "14:45",
+    "westArrive": "14:52",
+    "westDepart": "14:55"
+  },
+  {
+    "eastArrive": "15:02",
+    "eastDepart": "15:05",
+    "westArrive": "15:12",
+    "westDepart": "15:15"
+  },
+  {
+    "eastArrive": "15:22",
+    "eastDepart": "15:25",
+    "westArrive": "15:32",
+    "westDepart": "15:35"
+  },
+  {
+    "eastArrive": "15:42",
+    "eastDepart": "15:45",
+    "westArrive": "15:52",
+    "westDepart": "15:55"
+  },
+  {
+    "eastArrive": "16:02",
+    "eastDepart": "16:05",
+    "westArrive": "16:12",
+    "westDepart": "16:15"
+  },
+  {
+    "eastArrive": "16:22",
+    "eastDepart": "16:25",
+    "westArrive": "16:32",
+    "westDepart": "16:35"
+  },
+  {
+    "eastArrive": "16:42",
+    "eastDepart": "16:45",
+    "westArrive": "16:52",
+    "westDepart": "16:55"
+  },
+  {
+    "eastArrive": "17:02",
+    "eastDepart": "17:05",
+    "westArrive": "17:12",
+    "westDepart": "17:15"
+  },
+  {
+    "eastArrive": "17:22",
+    "eastDepart": "17:25",
+    "westArrive": "17:32",
+    "westDepart": "17:35"
+  },
+  {
+    "eastArrive": "17:42",
+    "eastDepart": "17:45",
+    "westArrive": "17:52",
+    "westDepart": "17:55"
+  },
+  {
+    "eastArrive": "18:02",
+    "eastDepart": "18:05",
+    "westArrive": "18:12",
+    "westDepart": "18:15"
+  },
+  {
+    "eastArrive": "18:22",
+    "eastDepart": "18:25",
+    "westArrive": "18:32",
+    "westDepart": "18:35"
+  },
+  {
+    "eastArrive": "18:42",
+    "eastDepart": "18:45",
+    "westArrive": "18:52",
+    "westDepart": "18:55"
+  },
+  {
+    "eastArrive": "19:02",
+    "eastDepart": "19:05",
+    "westArrive": "19:12",
+    "westDepart": "19:15"
+  },
+  {
+    "eastArrive": "19:22",
+    "eastDepart": "19:25",
+    "westArrive": "19:32",
+    "westDepart": "19:35"
+  },
+  {
+    "eastArrive": "19:42",
+    "eastDepart": "19:45",
+    "westArrive": "19:52",
+    "westDepart": "19:55"
+  },
+  {
+    "eastArrive": "20:02",
+    "eastDepart": "20:05",
+    "westArrive": "20:12",
+    "westDepart": "20:15"
+  },
+  {
+    "eastArrive": "20:22",
+    "eastDepart": "20:25",
+    "westArrive": "20:32",
+    "westDepart": "20:35"
+  },
+  {
+    "eastArrive": "20:42",
+    "eastDepart": "20:45",
+    "westArrive": "20:52",
+    "westDepart": "20:55"
+  },
+  {
+    "eastArrive": "21:02",
+    "eastDepart": "21:05",
+    "westArrive": "21:12",
+    "westDepart": "21:15"
+  },
+  {
+    "eastArrive": "21:22",
+    "eastDepart": "21:25",
+    "westArrive": "21:32",
+    "westDepart": "21:35"
+  },
+  {
+    "eastArrive": "21:42",
+    "eastDepart": "21:45",
+    "westArrive": "21:52",
+    "westDepart": "21:55"
+  },
+  {
+    "eastArrive": "22:02",
+    "eastDepart": "22:05",
+    "westArrive": "22:12",
+    "westDepart": "22:15"
+  },
+  {
+    "eastArrive": "22:22",
+    "eastDepart": "22:25",
+    "westArrive": "22:32",
+    "westDepart": "22:35"
+  },
+  {
+    "eastArrive": "22:42",
+    "eastDepart": "22:45",
+    "westArrive": "22:52",
+    "westDepart": "22:55"
+  },
+  {
+    "eastArrive": "23:02",
+    "eastDepart": "23:05",
+    "westArrive": "23:12",
+    "westDepart": "23:15"
+  },
+  {
+    "eastArrive": "23:22",
+    "eastDepart": "23:25",
+    "westArrive": "23:32",
+    "westDepart": "23:35"
+  },
+  {
+    "eastArrive": "23:42",
+    "eastDepart": "23:45",
+    "westArrive": "23:52",
+    "westDepart": "23:55"
+  },
+  {
+    "eastArrive": "0:02",
+    "eastDepart": "0:05",
+    "westArrive": "0:12",
+    "westDepart": "0:15"
+  },
+  {
+    "eastArrive": "0:22",
+    "eastDepart": "0:25",
+    "westArrive": "0:32",
+    "westDepart": "0:35"
+  },
+  {
+    "eastArrive": "0:42",
+    "eastDepart": "0:45",
+    "westArrive": "0:52",
+    "westDepart": "0:55"
+  },
+  {
+    "eastArrive": "1:02",
+    "eastDepart": "1:05",
+    "westArrive": "1:12",
+    "westDepart": "Out of Service"
+  }
+]

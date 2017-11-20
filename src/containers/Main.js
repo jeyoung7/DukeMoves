@@ -16,36 +16,80 @@ import {
 import { createStore } from 'redux';
 import { provider, connect } from 'react-redux';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import Polyline from '@mapbox/polyline';
 //relative imports
 // import Main from 'src/containers/Main';
 // import reducers from './redux/reducers';
 import DukeHeader from '/Users/jacobyoung/Desktop/DukeMoves-master/assets/dukeheader.png';
 import Routes from '/Users/jacobyoung/Desktop/DukeMoves-master/assets/routes.png';
 import Warnings from '/Users/jacobyoung/Desktop/DukeMoves-master/assets/warnings.png';
-import BikeRack from '/Users/jacobyoung/Desktop/DukeMoves-master/assets/bikerack.png';
+import BikeRack from '/Users/jacobyoung/Desktop/DukeMoves-master/assets/bikeracknew.png';
 import StopIcon from '/Users/jacobyoung/Desktop/DukeMoves-master/assets/Stop.png';
 
 import BikeRackData from '../../data/bikeRack.json';
 import Stops from '../../data/stops.json';
+import C1 from '../../data/c1.json';
+import StopModule from '../components/StopModule.js';
 
 export default class Main extends Component<{}> {
 
   constructor(props) {
-    super(props)
-
+    super(props);
+    this.c1 = C1;
+    this.stopSelected = false;
+    this.c1 = Polyline.decode(this.c1.routes[0].overview_polyline.points);
     this.renderIf = this.renderIf.bind(this);
     this.onRegionChange = this.onRegionChange.bind(this);
+    this.setName = this.setName.bind(this);
     this.state = { region: { latitudeDelta: 0.01422,
-         longitudeDelta: 0.0421 } }
+         longitudeDelta: 0.0421 },
+            stopSelected: false,
+            hour: null,
+            minutes: null,
+            stopName: null,
+ };
   }
+  componentDidMount() {
+   setInterval(() => {
+     this.setState({
+       hour: new Date().getHours(),
+       minutes: new Date().getMinutes()
+     });
+}, 5000);
+ }
   onRegionChange(region) {
     this.setState({ region });
   }
+  setName(lat, long) {
+    const stop = _.filter(Stops, (item) => {
+      return item.fields.lat === lat && item.fields.long === long;
+    });
+    this.setState({
+      stopName:  stop.stop_name,
+      stopSelected: true,
+    });
+  }
 
-  renderIf(jsx, condition)
-  {
-    if (condition)
-     {
+  c1route() {
+    const cord = this.c1.map((point, index) => {
+          return {
+                latitude: point[0],
+                longitude: point[1]
+                }
+        })
+    return (
+      <MapView.Polyline
+      coordinates={
+        cord}
+      strokeWidth={3}
+      strokeColor='#ff0000'
+      >
+      </MapView.Polyline>);
+  }
+
+
+  renderIf(jsx, condition) {
+    if (condition) {
        return jsx;
      }
   }
@@ -61,7 +105,7 @@ export default class Main extends Component<{}> {
           }}
         >
           <Image
-          style={{ width: 15, height: 15 }}
+          style={{ width: 12, height: 10 }}
           source={BikeRack}
           />
 
@@ -74,15 +118,16 @@ export default class Main extends Component<{}> {
     const stopMarkers = nStops.map((item) => { //creates bikeracks
       return (
         <MapView.Marker
-        style={{ borderWidth: 1}}
+          identifier={item.stop_name}
           coordinate={{
             latitude: item.fields.stop_lat,
             longitude: item.fields.stop_lon
 
           }}
+          onPress={ () => this.setName(item.fields.stop_lat, item.fields.stop_long)}
         >
           <Image
-          style={{ width: 25, height: 25, paddingLeft: 10 }}
+          style={{ width: 25, height: 25, paddingTop: 5 }}
           source={StopIcon}
           />
 
@@ -117,17 +162,18 @@ export default class Main extends Component<{}> {
       source={Routes}
       />
 
-      {mapMarkers.map(item =>
-        {
-          console.log(this.state);
-          return this.renderIf(item, this.state.region.latitudeDelta < 11)
+      {mapMarkers.map(item => {
+          return this.renderIf(item, this.state.region.latitudeDelta < 0.03);
         }
       )}
       {stopMarkers}
+      {this.c1route()}
+      {this.renderIf(<StopModule stopName={this.state.stopName} hours={this.state.hours} minute={this.state.minutes} stopIcon={'C1Icon'} />, this.state.stopSelected)}
       </MapView>
     );
   }
 }
+//    {this.c1route()}
 
 const styles = {
   container: {

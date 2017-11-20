@@ -1,8 +1,8 @@
 PODS:
-  - GoogleMaps (2.3.0):
-    - GoogleMaps/Maps (= 2.3.0)
-  - GoogleMaps/Base (2.3.0)
-  - GoogleMaps/Maps (2.3.0):
+  - GoogleMaps (2.5.0):
+    - GoogleMaps/Maps (= 2.5.0)
+  - GoogleMaps/Base (2.5.0)
+  - GoogleMaps/Maps (2.5.0):
     - GoogleMaps/Base
   - React/BatchedBridge (0.49.5):
     - React/Core
@@ -63,7 +63,7 @@ EXTERNAL SOURCES:
     :path: ../node_modules/react-native/ReactCommon/yoga
 
 SPEC CHECKSUMS:
-  GoogleMaps: 340a6a0bebd17c2db8abcd3921976c7c53c86cb8
+  GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   React: 9d5a23842dcc75ffef540ee2d2ef0eee1904ee58
   yoga: 596e987aa8aac0165abb235d2977982f090476a0
 
